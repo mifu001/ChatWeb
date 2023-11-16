@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:ital,wght@0,600;1,400&display=swap');
+
+$primary-color: #1a1a1a;
+$text-color: #e6e6e6;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    // background-image: url('bg.jpg');
+    background-color: #262626;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login {
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px -20px black;
+    background-color: $primary-color;
+    padding: 15px 20px;
+    align-items: center;
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // padding: 10px 15px;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 15px;
+
+            input {
+                // padding: 20px 15px;
+                border: none;
+                width: 100%;
+                background: none; 
+                color: $text-color;
+                font-size: 16px;
+                border-bottom: 1px solid rgba($text-color, .7);
+
+                &::placeholder {
+                    color: rgba($text-color, .7);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                border-radius: 10px;
+                padding: 10px 15px;
+                // align-self: flex-end;
+                background-color: #333333;
+                color: $text-color;
+                border-color: #333333;
+                border-width: 0;
+                transition: all .5s;
+            }
+
+            button:hover {
+                background-color: #404040;
+            }
+        }
+    }
+}
